@@ -59,7 +59,9 @@ export default {
 					purple: '#9b59b6',
 					pink: '#FFDEE2',
 					orange: '#FF7E5F',
-					lightblue: '#D3E4FD'
+					lightblue: '#D3E4FD',
+					black: '#1A1F2C',
+					gold: '#D4AF37'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -101,6 +103,15 @@ export default {
 				'fade-in-up': {
 					'0%': { opacity: '0', transform: 'translateY(20px)' },
 					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'glow': {
+					'0%, 100%': { boxShadow: '0 0 5px #D4AF37, 0 0 10px #D4AF37' },
+					'50%': { boxShadow: '0 0 20px #D4AF37, 0 0 30px #D4AF37' }
+				},
+				'golden-shimmer': {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
 				}
 			},
 			animation: {
@@ -109,11 +120,15 @@ export default {
 				'float': 'float 6s ease-in-out infinite',
 				'shimmer': 'shimmer 2s linear infinite',
 				'rotate-slow': 'rotate-slow 20s linear infinite',
-				'fade-in-up': 'fade-in-up 0.5s ease-out forwards'
+				'fade-in-up': 'fade-in-up 0.5s ease-out forwards',
+				'glow': 'glow 2s ease-in-out infinite',
+				'golden-shimmer': 'golden-shimmer 3s ease infinite'
 			},
 			backgroundImage: {
 				'lotus-pattern': "url('/src/assets/lotus-pattern.svg')",
-				'krishna-gradient': 'linear-gradient(102.3deg, rgba(147,39,143,1) 5.9%, rgba(234,172,232,1) 64%, rgba(246,219,245,1) 89%)'
+				'krishna-gradient': 'linear-gradient(102.3deg, rgba(147,39,143,1) 5.9%, rgba(234,172,232,1) 64%, rgba(246,219,245,1) 89%)',
+				'dark-gradient': 'linear-gradient(to right, #1A1F2C, #000000)',
+				'gold-gradient': 'linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)'
 			}
 		}
 	},

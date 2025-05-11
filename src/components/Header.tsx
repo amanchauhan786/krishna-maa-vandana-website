@@ -40,14 +40,14 @@ const Header = () => {
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-transform duration-300 ${
       isVisible ? 'translate-y-0' : '-translate-y-full'
-    } bg-gradient-to-r from-krishna-blue to-krishna-purple shadow-lg`}>
+    } bg-black/80 backdrop-blur-md border-b border-krishna-gold/20 shadow-lg shadow-krishna-gold/10`}>
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <div className="text-white font-semibold text-xl">
-            <span className="text-krishna-yellow">॥</span> मातृ दिवस <span className="text-krishna-yellow">॥</span>
+          <div className="golden-text font-semibold text-xl">
+            <span className="text-krishna-gold">॥</span> मातृ दिवस <span className="text-krishna-gold">॥</span>
           </div>
-          <button onClick={scrollToSection} className="flex items-center gap-2 text-white animate-bounce">
-            <span>स्क्रॉल करें</span>
+          <button onClick={scrollToSection} className="flex items-center gap-2 text-krishna-gold animate-bounce hover:text-white transition-colors">
+            <span>नीचे जाएं</span>
             <ChevronDown size={16} />
           </button>
         </div>
