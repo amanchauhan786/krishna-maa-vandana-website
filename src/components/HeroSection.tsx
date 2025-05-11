@@ -67,7 +67,7 @@ const HeroSection = () => {
         </h2>
         
         <p className="text-lg mb-8 max-w-lg mx-auto fade-in delay-500 text-krishna-gold/80">
-          जैसे श्री कृष्ण ने यशोदा माता को अपना हृदय दिया, वैसे ही हम भी अपनी माताओं को समर्पित करते हैं यह विशेष दिन। <span className="text-white">Happy Mother's Day to all the beautiful moms!</span>
+          जैसे श्री कृष्ण ने यशोदा माता को अपना हृदय दिया, वैसे ही हम भी अपनी माताओं को समर्पित करते हैं यह विशेष दिन। <span className="text-white">Happy Mother's Day!</span>
         </p>
         
         <div className="slide-in-left delay-700">
