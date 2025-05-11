@@ -63,8 +63,18 @@ const StorySection = () => {
             ref={(el) => elementsRef.current[2] = el}
             className="flex justify-center scroll-animation"
           >
-            <div className="w-full md:w-2/3 h-48 bg-contain bg-no-repeat bg-center tilt-card"
-                 style={{backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 60'%3E%3Crect x='10' y='10' width='80' height='40' rx='5' fill='%23D4AF37' fill-opacity='0.2' stroke='%23D4AF37' stroke-width='1'/%3E%3Ccircle cx='30' cy='30' r='10' fill='%23D4AF37' fill-opacity='0.1' stroke='%23D4AF37' stroke-width='1'/%3E%3Ccircle cx='70' cy='30' r='10' fill='%23D4AF37' fill-opacity='0.1' stroke='%23D4AF37' stroke-width='1'/%3E%3C/svg%3E")`}}></div>
+            <div className="w-full md:w-2/3 relative overflow-hidden rounded-lg shadow-lg shadow-krishna-gold/20 h-60 tilt-card">
+              <div 
+                className="absolute inset-0 bg-cover bg-center transform transition-transform hover:scale-110 duration-700 ease-in-out"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23000' /%3E%3Ccircle cx='150' cy='100' r='70' fill='none' stroke='%23D4AF37' stroke-width='2' /%3E%3Ccircle cx='150' cy='70' r='20' fill='%23D4AF37' fill-opacity='0.2' stroke='%23D4AF37' stroke-width='1' /%3E%3Crect x='130' y='95' width='40' height='60' rx='20' fill='%23D4AF37' fill-opacity='0.2' stroke='%23D4AF37' stroke-width='1' /%3E%3Cpath d='M110 110 Q150 140 190 110' fill='none' stroke='%23D4AF37' stroke-width='2' /%3E%3C/svg%3E")`
+                }}
+              ></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
+                <p className="text-krishna-gold text-sm font-medium">कृष्ण और यशोदा माता का प्यार</p>
+              </div>
+            </div>
           </div>
           
           <div 
@@ -79,6 +89,24 @@ const StorySection = () => {
           
           <div 
             ref={(el) => elementsRef.current[4] = el}
+            className="flex justify-center scroll-animation mt-8"
+          >
+            <div className="w-full md:w-2/3 relative overflow-hidden rounded-lg shadow-lg shadow-krishna-gold/20 h-60 tilt-card">
+              <div 
+                className="absolute inset-0 bg-cover bg-center transform transition-transform hover:scale-110 duration-700 ease-in-out"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 200'%3E%3Crect width='300' height='200' fill='%23000' /%3E%3Ccircle cx='100' cy='90' r='40' fill='none' stroke='%23D4AF37' stroke-width='1' /%3E%3Ccircle cx='100' cy='80' r='15' fill='%23D4AF37' fill-opacity='0.2' stroke='%23D4AF37' stroke-width='1' /%3E%3Ccircle cx='190' cy='100' r='25' fill='%23D4AF37' fill-opacity='0.2' stroke='%23D4AF37' stroke-width='1' /%3E%3Cpath d='M130 100 Q160 90 180 110' fill='none' stroke='%23D4AF37' stroke-width='1' /%3E%3Crect x='85' y='95' width='30' height='40' rx='15' fill='%23D4AF37' fill-opacity='0.2' stroke='%23D4AF37' stroke-width='1' /%3E%3Crect x='175' y='105' width='30' height='40' rx='15' fill='%23D4AF37' fill-opacity='0.1' stroke='%23D4AF37' stroke-width='1' /%3E%3C/svg%3E")`
+                }}
+              ></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
+                <p className="text-krishna-gold text-sm font-medium">यशोदा माँ का वात्सल्य</p>
+              </div>
+            </div>
+          </div>
+          
+          <div 
+            ref={(el) => elementsRef.current[5] = el}
             className="scroll-animation"
           >
             <blockquote className="italic border-l-4 border-krishna-gold pl-4 py-2 text-krishna-gold/80">

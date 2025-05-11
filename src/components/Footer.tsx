@@ -37,6 +37,19 @@ const Footer = () => {
               © {new Date().getFullYear()} मातृ दिवस | <span className="text-white">Krishna Bhagwan ke</span> आशीर्वाद से
             </p>
           </div>
+          
+          <div className="mt-8 pt-4 border-t border-krishna-gold/20 w-full max-w-md">
+            <div className="flex items-center justify-center text-center scroll-animation">
+              <div className="created-by-animation glass-card py-3 px-6 rounded-full bg-krishna-black/80 border-krishna-gold/30 border">
+                <p className="text-sm">
+                  <span className="text-white opacity-80">Created with </span>
+                  <span className="golden-text font-semibold animate-pulse">♥</span>
+                  <span className="text-white opacity-80"> by </span>
+                  <span className="text-krishna-gold font-medium animate-golden-shimmer bg-clip-text">Aman Chauhan</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
