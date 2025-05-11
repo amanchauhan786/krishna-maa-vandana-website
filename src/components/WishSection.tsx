@@ -17,6 +17,15 @@ const WishSection = () => {
       "माँ, आपने मुझे जो संस्कार दिए हैं, उसके लिए करोड़ों धन्यवाद। You're the best!"
     ];
     setWishes(defaultWishes);
+    
+    // Add floating animation to wishes
+    setTimeout(() => {
+      const wishElements = document.querySelectorAll('.wish-card');
+      wishElements.forEach((el, index) => {
+        (el as HTMLElement).style.animationDelay = `${index * 0.2}s`;
+        el.classList.add('floating');
+      });
+    }, 500);
   }, []);
   
   useEffect(() => {
@@ -24,6 +33,11 @@ const WishSection = () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
+          
+          // Add confetti effect when section becomes visible
+          if (entry.target === sectionRef.current) {
+            createConfetti();
+          }
         }
       });
     }, {
@@ -36,12 +50,57 @@ const WishSection = () => {
       if (el) observer.observe(el);
     });
     
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+    
     return () => {
       elements.forEach(el => {
         if (el) observer.unobserve(el);
       });
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
     };
   }, []);
+  
+  const createConfetti = () => {
+    for (let i = 0; i < 50; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.animationDelay = Math.random() * 3 + 's';
+      confetti.style.backgroundColor = `hsl(${Math.random() * 60 + 30}, 100%, 50%)`;
+      document.body.appendChild(confetti);
+      
+      setTimeout(() => {
+        confetti.remove();
+      }, 5000);
+    }
+    
+    // Add confetti styles
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .confetti {
+        position: fixed;
+        top: -10px;
+        width: 10px;
+        height: 10px;
+        z-index: 999;
+        animation: confettiFall 5s linear forwards;
+      }
+      
+      @keyframes confettiFall {
+        0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    setTimeout(() => {
+      document.head.removeChild(style);
+    }, 5000);
+  };
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,7 +114,7 @@ const WishSection = () => {
       return;
     }
     
-    // Add the new wish to the list
+    // Add the new wish to the list with animation
     setWishes([wish, ...wishes]);
     setWish('');
     
@@ -63,6 +122,56 @@ const WishSection = () => {
       title: "आपकी शुभकामना जोड़ दी गई है!",
       description: "Thank you, your message has been sent successfully",
     });
+    
+    // Create heart animation on submission
+    createHearts();
+  };
+  
+  const createHearts = () => {
+    const formElement = document.querySelector('form');
+    if (!formElement) return;
+    
+    const formRect = formElement.getBoundingClientRect();
+    const centerX = formRect.left + formRect.width / 2;
+    const centerY = formRect.top + formRect.height / 2;
+    
+    for (let i = 0; i < 10; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = centerX + 'px';
+      heart.style.top = centerY + 'px';
+      heart.style.animationDelay = i * 0.2 + 's';
+      document.body.appendChild(heart);
+      
+      setTimeout(() => {
+        heart.remove();
+      }, 2000);
+    }
+    
+    // Add heart styles
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .heart {
+        position: fixed;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        pointer-events: none;
+        animation: heartFly 2s forwards;
+      }
+      
+      @keyframes heartFly {
+        0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+        10% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+        100% { transform: translate(-50%, calc(-50% - 100px)) scale(0); opacity: 0; }
+      }
+    `;
+    document.head.appendChild(style);
+    
+    setTimeout(() => {
+      document.head.removeChild(style);
+    }, 2000);
   };
   
   return (
@@ -76,17 +185,17 @@ const WishSection = () => {
           className="text-3xl font-bold mb-10 text-center golden-text scroll-animation"
         >
           <div className="divider">
-            <div className="peacock-feather"></div>
+            <div className="peacock-feather spinning"></div>
           </div>
           <span>माँ के लिए शुभकामनाएँ <span className="text-white text-2xl">(Wishes for Mom)</span></span>
           <div className="divider">
-            <div className="peacock-feather"></div>
+            <div className="peacock-feather spinning"></div>
           </div>
         </h2>
         
         <div 
           ref={(el) => elementsRef.current[1] = el}
-          className="scroll-animation max-w-md mx-auto mb-8"
+          className="scroll-animation max-w-md mx-auto mb-8 hoverable-card"
         >
           <form onSubmit={handleSubmit} className="krishna-border glass-card">
             <textarea
@@ -98,7 +207,7 @@ const WishSection = () => {
             ></textarea>
             <button
               type="submit"
-              className="w-full mt-4 bg-gradient-to-r from-krishna-gold to-yellow-500 text-black py-3 rounded-lg hover:from-yellow-500 hover:to-krishna-gold transition-all duration-300 font-semibold"
+              className="w-full mt-4 bg-gradient-to-r from-krishna-gold to-yellow-500 text-black py-3 rounded-lg hover:from-yellow-500 hover:to-krishna-gold transition-all duration-300 font-semibold hover:scale-105"
             >
               Send Wishes ✨
             </button>
@@ -114,7 +223,7 @@ const WishSection = () => {
           {wishes.map((wishText, index) => (
             <div 
               key={index}
-              className={`p-4 rounded-lg glass-card border-l-4 ${
+              className={`p-4 rounded-lg glass-card border-l-4 wish-card ${
                 index % 2 === 0 ? 'border-krishna-gold' : 'border-yellow-500'
               } animate-fade-in-up tilt-card`}
               style={{ animationDelay: `${index * 0.1}s` }}

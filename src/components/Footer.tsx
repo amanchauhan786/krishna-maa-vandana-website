@@ -36,6 +36,9 @@ const Footer = () => {
             <p className="text-sm mt-2 opacity-70">
               © {new Date().getFullYear()} मातृ दिवस | <span className="text-white">Krishna Bhagwan ke</span> आशीर्वाद से
             </p>
+            <p className="text-sm mt-4 text-white font-medium animate-pulse">
+              Created by <span className="golden-text font-bold">Aman Chauhan</span>
+            </p>
           </div>
         </div>
       </div>
