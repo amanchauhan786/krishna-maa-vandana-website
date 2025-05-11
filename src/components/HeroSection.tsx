@@ -49,12 +49,6 @@ const HeroSection = () => {
                style={{backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='none' stroke='%23D4AF37' stroke-width='2'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%23D4AF37' fill-opacity='0.2'/%3E%3C/svg%3E")`}}></div>
         </div>
         
-        <div className="relative mb-8">
-          <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 w-32 h-32">
-            <div className="krishna-image w-full h-full absolute top-0 left-0 animate-float"></div>
-          </div>
-        </div>
-        
         <h1 className="text-5xl font-bold mb-4 shimmer-text">
           मातृ दिवस
         </h1>
@@ -82,10 +76,6 @@ const HeroSection = () => {
       
       <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-bounce">
         <ChevronDown className="text-krishna-gold" size={30} />
-      </div>
-      
-      <div className="absolute bottom-20 right-10 w-24 h-24 opacity-50 animate-float">
-        <div className="flute-image w-full h-full"></div>
       </div>
     </div>
   );
