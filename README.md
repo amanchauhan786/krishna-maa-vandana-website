@@ -1,73 +1,80 @@
-# Welcome to your Lovable project
+<img width="1545" height="854" alt="image" src="https://github.com/user-attachments/assets/6d02f350-e2c4-4e59-b51c-00f1c0c04c95" />
 
-## Project info
+                                                                         LIVE DEMO:--->  https://matra-aman.vercel.app/
 
-**URL**: https://lovable.dev/projects/492572f0-19b4-450e-a3e2-7231eaf2807c
 
-## How can I edit this code?
+````markdown
+# Krishna Maa Vandana - Devotional Website  
 
-There are several ways of editing your application.
+This project is a serene and devotional front-end website template dedicated to "Krishna Maa Vandana." It is designed to provide a peaceful and spiritual online space for devotees.  
+ 
 
-**Use Lovable**
+## Table of Contents  
+- Features  
+- Tech Stack  
+- How to View  
+- Project Structure  
+- Customization  
+- License  
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/492572f0-19b4-450e-a3e2-7231eaf2807c) and start prompting.
+## ✨ Features  
+- Devotional Theme: A peaceful and aesthetically pleasing design suitable for a spiritual or devotional website.  
+- Responsive Design: Fully responsive layout for desktops, tablets, and mobile devices.  
+- Informative Sections: Well-structured sections to include prayers, verses, and devotional content.  
+- Clean & Simple UI: An intuitive and easy-to-navigate interface focusing on spirituality.  
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠️ Tech Stack  
+This is a front-end project built with the following web technologies:  
+- HTML5: Structure and content of the web pages  
+- CSS3: Styling, layout, and responsive design  
+- JavaScript: Interactive elements on the site  
 
-**Use your preferred IDE**
+## 🚀 How to View  
+You can view this project locally without any complex setup:  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/amanchauhan786/krishna-maa-vandana-website.git
+````
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+2. Navigate to the project directory:
 
-Follow these steps:
+   ```bash
+   cd krishna-maa-vandana-website
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+3. Open `index.html` in your browser:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+   * Double-click the file, or
+   * Right-click and select "Open with" followed by your preferred browser
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 📁 Project Structure
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+The project files are organized as follows:
+
+```
+krishna-maa-vandana-website/
+├── index.html      # Main landing page  
+├── css/  
+│   └── style.css   # Main stylesheet  
+├── js/  
+│   └── script.js   # JavaScript file  
+└── images/         # Folder for images and assets  
 ```
 
-**Edit a file directly in GitHub**
+## 🎨 Customization
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+You can easily customize the website to fit your needs:
 
-**Use GitHub Codespaces**
+* Content: Edit the text, prayers, and images in the `index.html` file
+* Styling: Modify colors, fonts, and layouts in `css/style.css`
+* Functionality: Add interactive features in `js/script.js`
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 📄 License
 
-## What technologies are used for this project?
+This project is open-source. You are free to use and modify it for personal or devotional purposes. For best practice, consider adding an MIT License to your repository.
 
-This project is built with:
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/492572f0-19b4-450e-a3e2-7231eaf2807c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Do you also want me to **add a `.gitignore` file template** for this repo (like excluding `.DS_Store`, `node_modules`, or IDE configs), even though it’s a simple static website?
+```
