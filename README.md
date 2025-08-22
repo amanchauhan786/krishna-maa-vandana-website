@@ -76,5 +76,3 @@ This project is open-source. You are free to use and modify it for personal or d
 
 ```
 
-Do you also want me to **add a `.gitignore` file template** for this repo (like excluding `.DS_Store`, `node_modules`, or IDE configs), even though it’s a simple static website?
-```
